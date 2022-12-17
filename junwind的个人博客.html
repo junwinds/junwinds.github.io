@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///C:/Users/xqw/Desktop/xqwEdit.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.title = document.getElementById("article-title").innerText; // title标签内容自动取文章标题
+    </script>
+    <title>junwind的个人博客</title>
+    <style>
+        html,body { height: 100%;padding: 0;margin: 0;padding-top: 6px;}
+        /* 标题框 */
+        #article-title {
+            padding: 10px 15px;
+            width: 70%;
+            height: 5%;
+            border: 1px solid rgb(225,225,230);
+            border-radius: 8px 8px 0 0;
+            background-color: #f3f2f2;
+            color: rgba(0,0,0,.87);
+            font-size: 24px;
+            overflow: auto; /*内部滚动条*/
+            margin: auto; /*元素居中*/
+            text-align: center; /*内部文字居中*/
+        }
+        #article-title:empty:before{
+            content: "在这里输入标题~~";
+            color: gray;
+        }
+        #article-title:focus:before { /* 获取焦点时，清除内容 */
+            content: none;
+        }
+        #article-title:focus {/* 输入框获取焦点时，清除默认黑框，并且给阴影 */
+            outline: none; /* 有黑框是因为默认给了轮廓 */
+            box-shadow: 0 0 2px rgb(167, 167, 189) inset;
+        }
+
+        /* 内容框 */
+        #article-box {
+            padding: 10px 15px;
+            width: 70%;
+            height: auto;
+            min-height: 80%;
+            border: 1px solid rgb(225,225,230);
+            background-color: #f3f2f2;
+            color: rgba(0,0,0,.87);
+            font-size: 16px;
+            margin: auto;
+        }
+        #article-box:empty:before{/* 为输入内容时，显示提示内容 */
+            content: "在这里输入内容~~";
+            color: gray;
+        }
+        #article-box:focus:before {/* 获取焦点时，清除内容 */
+            content: none;
+        }
+        #article-box:focus {/* 输入框获取焦点时，清除默认黑框，并且给阴影 */
+            outline: none; /* 有黑框是因为默认给了轮廓 */
+            box-shadow: 0 0 2px rgb(167, 167, 189) inset;
+        }
+
+        /* 脚注 */
+        #article-footer {
+            padding: 10px 15px;
+            width: 70%;
+            height: 5%;
+            border: 1px solid rgb(225,225,230);
+            border-radius: 0 0 8px 8px;
+            background-color: #f3f2f2;
+            color: gray;
+            font-size: 24px;
+            overflow: auto; /*内部滚动条*/
+            margin: auto; /*元素居中*/
+            text-align: center; /*内部文字居中*/
+        }
+    </style>
+</head>
+<body youdao="bind">
+    <!-- 文章标题 -->
+    <div id="article-title" contenteditable="true" onmouseout="document.title = document.getElementById(&#39;article-title&#39;).innerText;">junwind的个人博客</div>
+
+    <!-- 正文 -->
+    <div id="article-box" contenteditable="true">1. 使用自己开发的 snote 编辑器书写。<div>2. 编写样式就是笔记样式。</div><div>3. 目录有完善。</div></div>
+
+    <!-- 脚注 -->
+    <div id="article-footer">学海无涯~~</div>
+
+</body></html>
